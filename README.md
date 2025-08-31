@@ -21,6 +21,38 @@ double : sign(1) + exponent(11) + fraction (52)
 3.실수를 비교할 때는 등호를 사용하면 안된다.
 (허용 오차 : epsilon = 1e-9 를 포함하여 비교한다)
 
+**STL과 함수 인자**
+함수 인자에 넣으면 복사 : STL(vector), struction
+
+ex 1.
+bool cmp1(vector<int> v1, vector<int> v2, int idx){
+    return v1[idx] > v2[idx];
+}
+시간 복잡도 : O(N) <vector를 복사하는 시간이 있으므로>
+
+ex 2.
+bool cmp2(vector<int>& v1, vector<int>& v2, int idx){
+    return v1[idx] > v2[idx];
+}
+시간 복잡도 : O(1)
+
+**표준 입출력**
+getline(cin, str); <공백 포함 문자열 받기>
+ios::sync_with_stdio(0); <C/C++ 동기화 스트림 끊기>
+cin.tie(0); <cout 버퍼를 비우지 않음>
+※endl 쓰지 말기 <출력 버퍼를 비움>※
+
+**배열**
+메모리 상에 원소를 연속하게 배치한 자료구조
+1. O(1)에 k번째 원소를 확인/변경 가능 <k번 뒤로 가면 확인 가능>
+2. 추가적으로 소모되는 메모리의 양(=overhead)가 거의 없음
+3. Cache hit rate가 높음
+4. 메모리 상에 연속한 구간을 잡아야 해서 할당에 제약이 걸림
+
+임의의 위치에 있는 원소를 확인/변경, O(1)
+끝의 원소를 추가/제거 : O(1)
+임의의 위치에 원소를 추가/제거, O(N) <평균적으로 밀어(땡겨)야 하는 개수 : N/2>
+
 Sort
 
 Select sort : O(N^2)
