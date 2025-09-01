@@ -36,6 +36,8 @@ bool cmp2(vector<int>& v1, vector<int>& v2, int idx){
 }
 시간 복잡도 : O(1)
 
+GCC header : <bits/stdc++.h>
+
 **표준 입출력**
 getline(cin, str); <공백 포함 문자열 받기>
 ios::sync_with_stdio(0); <C/C++ 동기화 스트림 끊기>
@@ -52,6 +54,29 @@ cin.tie(0); <cout 버퍼를 비우지 않음>
 임의의 위치에 있는 원소를 확인/변경, O(1)
 끝의 원소를 추가/제거 : O(1)
 임의의 위치에 원소를 추가/제거, O(N) <평균적으로 밀어(땡겨)야 하는 개수 : N/2>
+
+fill : fill(arr, arr+arr_size, 0);
+
+**STL vector**
+vector<int> v1(3, 5); // {5, 5, 5}
+cout << v1.size(); // 3  ※size 함수는 unsigned※
+v1.push_back(7); // {5, 5, 5, 7}
+
+vector<int> v2(2); // {0, 0}
+v2.insert(v2.begin()+1, 3); // {0, 3, 0}
+
+vector<int> v3 = {1, 2, 3, 4}; // {1, 2, 3, 4}
+v3.erase(v3.begin()+2); // {1, 2, 4}
+
+vector<int> v4; // {}
+v4 = v3; // {1, 2, 4}
+cout << v4[0] << v4[1]; // 12
+v4.pop_back(); // {1}
+v4.clear(); // {}
+
+range-based for loop
+for(int e : vector) // 복사
+for(int& e: vector) // 참
 
 Sort
 
