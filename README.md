@@ -78,6 +78,31 @@ range-based for loop
 for(int e : vector) // 복사
 for(int& e: vector) // 참
 
+**연결 리스트**
+연결 리스트의 성질
+1. k번째 원소를 확인/변경하기 위해 O(k)가 필요함
+2. 임의의 위치에 원소를 추가/임의 위치의 원소 제거는 O(1)
+3. 원소들이 메모리 상에 연속해있지 않아 Cache hit rate가 낮지만 할당이 다소 쉬
+
+연결 리스트의 종류
+1. 단일 연결 리스트
+2. 이중 연결 리스트 ※STL list
+3. 원형 연결 리스트
+
+배열과 연결 리스트의 차이 (배열, 연결 리스트)
+k번째 원소의 접근 : O(1), O(k)
+임의 위치에 원소 추가/제거 : O(N), O(1)
+메모리 상의 배치 : 연속, 불연속
+추가적으로 필요한 공간 : -, O(N)
+
+야매 연결 리스트
+const int MX = 10000005;
+int dat[MX], pre[MX], nxt[MX];
+int unused = 1;
+fill(pre, pre+MX, -1);
+fill(nxt, nxt+MX, -1);
+
+
 Sort
 
 Select sort : O(N^2)
