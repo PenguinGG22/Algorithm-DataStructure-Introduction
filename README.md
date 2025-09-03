@@ -102,6 +102,25 @@ int unused = 1;
 fill(pre, pre+MX, -1);
 fill(nxt, nxt+MX, -1);
 
+손코딩 문제
+1. 원형 연결 리스트 내의 임의의 노드 하나가 주어졌을 때 해당 List의 길이? O(N)
+2. 중간에 만나는 두 연결 리스트의 시작점들이 주어졌을 때 만나는 지점을 구하는 방법? O(A+B)
+3. 연결 리스트 안에 사이클 확인법? O(N)
+Floyd's cycle-finding algorithm : cursor speed 1, 2로 출발시키면 cycle이 있으면 두 커서는 반드시 만난다.
+
+**스택/큐/덱(Restricted Structure)**
+스택 : FILO
+
+스택의 성질
+1. 원소의 추가 : O(1)
+2. 원소의 제거 : O(1)
+3. 제일 상단의 원소 확인 : O(1)
+4. 제일 상단이 아닌 나머지 원소들의 확인/변경 불가능
+
+스택의 구현
+const int MX = 1000005;
+int dat[MX];
+int pos = 0; // pos는 스택 맨 위의 index
 
 Sort
 
