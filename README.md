@@ -120,7 +120,7 @@ Floyd's cycle-finding algorithm : cursor speed 1, 2로 출발시키면 cycle이 
 스택의 구현
 const int MX = 1000005;
 int dat[MX];
-int pos = 0; // pos는 스택 맨 위의 index
+int pos = 0; // pos(idx) = top + 1
 
 Sort
 
