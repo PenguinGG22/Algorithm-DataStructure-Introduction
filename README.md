@@ -122,6 +122,19 @@ const int MX = 1000005;
 int dat[MX];
 int pos = 0; // pos(idx) = top + 1
 
+큐 : FIFO
+
+큐의 성질
+1. 원소의 추가 O(1)
+2. 원소의 제거 O(1)
+3. 제일 앞/뒤의 원소 확인 O(1)
+4. 나머지 원소들의 확인/변경이 불가능
+
+스택의 구현
+const int MX = 1000005;
+int dat[MX];
+int head = 0, tail = 0;
+
 Sort
 
 Select sort : O(N^2)
