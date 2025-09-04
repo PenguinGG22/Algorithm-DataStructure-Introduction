@@ -123,7 +123,6 @@ int dat[MX];
 int pos = 0; // pos(idx) = top + 1
 
 큐 : FIFO
-
 큐의 성질
 1. 원소의 추가 O(1)
 2. 원소의 제거 O(1)
@@ -142,6 +141,18 @@ Q.front()
 Q.back()
 Q.size()
 Q.empty()
+
+덱 : LIFO + FIFO
+덱의 성질
+1. 원소의 추가 O(1)
+2. 원소의 제거 O(1)
+3. 제일 앞/뒤의 원소 확인 O(1)
+4. 나머지 원칙적 불가
+
+덱의 구현
+const int MX = 1000005;
+int dat[2*MX+1];
+int head = MX, tail = MX;
 
 Sort
 
