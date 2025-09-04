@@ -135,6 +135,14 @@ const int MX = 1000005;
 int dat[MX];
 int head = 0, tail = 0;
 
+스택 STL
+Q.push()
+Q.pop()
+Q.front()
+Q.back()
+Q.size()
+Q.empty()
+
 Sort
 
 Select sort : O(N^2)
