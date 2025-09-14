@@ -1,9 +1,12 @@
 # Algorithm-Introduction
 
 ### Online Judge STL/IO Setting
-GCC header : <bits/stdc++.h>
+```cpp
+#include <bits/stdc++.h>
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
+
+---
 
 ### 시간 복잡도
 입력의 크기와 문제를 해결하는데 걸리는 시간의 상관관계
@@ -44,14 +47,15 @@ scanf -> getline(cin, str);
 
 **배열**
 메모리 상에 원소를 연속하게 배치한 자료구조
-1. O(1)에 k번째 원소를 확인/변경 가능 <k번 뒤로 가면 확인 가능>
+1. O(1)에 k번째 원소를 확인/변경 가능
 2. 추가적으로 소모되는 메모리의 양(=overhead)가 거의 없음
 3. Cache hit rate가 높음
 4. 메모리 상에 연속한 구간을 잡아야 해서 할당에 제약이 걸림
 
-임의의 위치에 있는 원소를 확인/변경, O(1)
-끝의 원소를 추가/제거 : O(1)
-임의의 위치에 원소를 추가/제거, O(N) <평균적으로 밀어(땡겨)야 하는 개수 : N/2>
+1. 임의의 위치에 있는 원소를 확인/변경 : O(1)
+2. 마지막 위치의 원소를 추가/제거 : O(1)
+3. 임의의 위치에 원소를 추가/제거 : O(N)
+> k번에 추가된다면, k이후의 원소들을 한칸씩 밀고, 땡기기 때문에
 
 fill : fill(arr, arr+arr_size, 0);
 
