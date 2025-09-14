@@ -42,8 +42,10 @@ double: sign(1) + exponent(11) + fraction (52)
 Vector를 복사하는 시간 복잡도 : O(N)
 Vector를 참조하는 시간 복잡도 : O(1)
 
-### 표준 입출력
-C++ String 입력 : getline(cin, str);
+### String 입력 함수
+```
+getline(cin, str);
+```
 
 ## 배열
 ### 배열의 정의
@@ -62,29 +64,21 @@ C++ String 입력 : getline(cin, str);
 ```
 k번에 추가된다면, k이후의 원소들을 한칸씩 밀고, 땡기기 때문이다.
 ```
+> Example Code : Array1.cpp
+> Example Code : Array2.cpp
 
-fill : fill(arr, arr+arr_size, 0);
+### 배열의 초기화 함수
+```
+fill(arr, arr + arr_size, 0);
+```
+## Vector
+### STL vector
+> Example Code : Vector.cpp
 
-**STL vector**
-vector<int> v1(3, 5); // {5, 5, 5}
-cout << v1.size(); // 3  ※size 함수는 unsigned※
-v1.push_back(7); // {5, 5, 5, 7}
-
-vector<int> v2(2); // {0, 0}
-v2.insert(v2.begin()+1, 3); // {0, 3, 0}
-
-vector<int> v3 = {1, 2, 3, 4}; // {1, 2, 3, 4}
-v3.erase(v3.begin()+2); // {1, 2, 4}
-
-vector<int> v4; // {}
-v4 = v3; // {1, 2, 4}
-cout << v4[0] << v4[1]; // 12
-v4.pop_back(); // {1}
-v4.clear(); // {}
-
-range-based for loop
-for(int e : vector) // 복사
-for(int& e: vector) // 참
+### Range-based for loop
+for(int e : vector) : vector의 원소에 복사 접근
+for(int& e: vector) : vector의 원소에 직접 접근
+> Soultion Code : 10808.cpp
 
 **연결 리스트**
 연결 리스트의 성질
