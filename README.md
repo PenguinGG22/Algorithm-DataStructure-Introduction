@@ -56,6 +56,10 @@ getline(cin, str);
 2. 추가적으로 소모되는 메모리의 양(=overhead)가 거의 없음
 3. Cache hit rate가 높음
 4. 메모리 상에 연속한 구간을 잡아야 해서 할당에 제약이 걸림
+```
+Cache hit rate : CPU가 필요한 데이터를 Cache memory에서 성공적으로 찾은 비율
+Overhead : 작업을 처리하는데 간접적으로 필요한 자원이나 시간 (Pointer)
+```
 
 ### 배열의 시간복잡도
 1. 임의의 위치에 있는 원소를 확인/변경 : O(1)
@@ -65,7 +69,6 @@ getline(cin, str);
 k번에 추가된다면, k이후의 원소들을 한칸씩 밀고, 땡기기 때문이다.
 ```
 > Example Code : Array1.cpp
-> Example Code : Array2.cpp
 
 ### 배열의 초기화 함수
 ```
@@ -79,36 +82,45 @@ fill(arr, arr + arr_size, 0);
 for(int e : vector) : vector의 원소에 복사 접근
 for(int& e: vector) : vector의 원소에 직접 접근
 > Soultion Code : 10808.cpp
+> Example Code : Func2.cpp
 
-**연결 리스트**
-연결 리스트의 성질
+## 연결 리스트
+### 연결 리스트의 정의
+데이터와 다음 노드를 가르키는 링크를 가진 노드들이 한 줄로 연결된 자료구조
+### 연결 리스트의 성질
 1. k번째 원소를 확인/변경하기 위해 O(k)가 필요함
 2. 임의의 위치에 원소를 추가/임의 위치의 원소 제거는 O(1)
-3. 원소들이 메모리 상에 연속해있지 않아 Cache hit rate가 낮지만 할당이 다소 쉬
+3. 원소들이 메모리 상에 연속해있지 않아 Cache hit rate가 낮지만 할당이 쉬움
+```
+Cache hit rate : CPU가 필요한 데이터를 Cache memory에서 성공적으로 찾은 비율
+Overhead : 작업을 처리하는데 간접적으로 필요한 자원이나 시간 (Pointer)
+```
 
-연결 리스트의 종류
-1. 단일 연결 리스트
-2. 이중 연결 리스트 ※STL list
-3. 원형 연결 리스트
+### 연결 리스트의 종류
+1. 단일 연결 리스트 (Singly Linked List)
+2. 이중 연결 리스트 (Doubly Linked List)
+> STL list = 이중 연결 리스트
+3. 원형 연결 리스트 (Circular Linked List)
 
-배열과 연결 리스트의 차이 (배열, 연결 리스트)
-k번째 원소의 접근 : O(1), O(k)
-임의 위치에 원소 추가/제거 : O(N), O(1)
-메모리 상의 배치 : 연속, 불연속
-추가적으로 필요한 공간 : -, O(N)
+### 연결 리스트의 시간 복잡도
+1. 임의의 위치에 있는 원소를 확인/변경 : O(N)
+2. 임의의 위치에 있는 원소를 추가/제거 : O(1)
 
-야매 연결 리스트
-const int MX = 10000005;
-int dat[MX], pre[MX], nxt[MX];
-int unused = 1;
-fill(pre, pre+MX, -1);
-fill(nxt, nxt+MX, -1);
+### 연결 리스트의 구현
+> Example Code : Linked-list1.cpp
+> Example Code : Linked-list2.cpp
+> Solution Code : 1406.cpp
 
-손코딩 문제
-1. 원형 연결 리스트 내의 임의의 노드 하나가 주어졌을 때 해당 List의 길이? O(N)
-2. 중간에 만나는 두 연결 리스트의 시작점들이 주어졌을 때 만나는 지점을 구하는 방법? O(A+B)
-3. 연결 리스트 안에 사이클 확인법? O(N)
+### 연결 리스트 문제
+1. 원형 연결 리스트 내의 임의의 노드 하나가 주어졌을 때 해당 List의 길이?
+> O(N)
+2. 중간에 만나는 두 연결 리스트의 시작점들이 주어졌을 때 만나는 지점을 구하는 방법?
+> O(A+B)
+3. 연결 리스트 안에 사이클 확인법?
+> O(N)
+```
 Floyd's cycle-finding algorithm : cursor speed 1, 2로 출발시키면 cycle이 있으면 두 커서는 반드시 만난다.
+```
 
 **스택/큐/덱(Restricted Structure)**
 스택 : FILO
