@@ -1,5 +1,10 @@
 # Algorithm-Introduction
 
+### Online Judge STL/IO Setting
+GCC header : <bits/stdc++.h>
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+
 ### 시간 복잡도
 입력의 크기와 문제를 해결하는데 걸리는 시간의 상관관계
 
@@ -13,7 +18,7 @@ O(1) < O(lgN) < O(N) < O(NlgN) < O(N^2) < O(2^n) < O(N!)
 입력의 크기와 문제를 해결하는데 필요한 공간의 상관관계
 > 512MB = 1.2억개의 int자료형을 사용 가능
 
----
+- Example code : TimeComplexity.cpp
 
 ### 정수 자료형
 short(2byte) < int(4byte) < long long (8byte)
@@ -29,28 +34,13 @@ float(4byte) < double(8byte)
 2. double에 long long 범위의 정수를 함부로 담으면 안된다.
 3. 실수를 비교할 때는 등호를 사용하면 안된다.
 
-**STL과 함수 인자**
-함수 인자에 넣으면 복사 : STL(vector), struction
+## STL
+Vector를 복사하는 시간 복잡도 : O(N)
+Vector를 참조하는 시간 복잡도 : O(1)
 
-ex 1.
-bool cmp1(vector<int> v1, vector<int> v2, int idx){
-    return v1[idx] > v2[idx];
-}
-시간 복잡도 : O(N) <vector를 복사하는 시간이 있으므로>
-
-ex 2.
-bool cmp2(vector<int>& v1, vector<int>& v2, int idx){
-    return v1[idx] > v2[idx];
-}
-시간 복잡도 : O(1)
-
-GCC header : <bits/stdc++.h>
-
-**표준 입출력**
-getline(cin, str); <공백 포함 문자열 받기>
-ios::sync_with_stdio(0); <C/C++ 동기화 스트림 끊기>
-cin.tie(0); <cout 버퍼를 비우지 않음>
-※endl 쓰지 말기 <출력 버퍼를 비움>※
+## 표준 입출력
+scanf -> getline(cin, str);
+> str -> C++ String
 
 **배열**
 메모리 상에 원소를 연속하게 배치한 자료구조
