@@ -5,8 +5,7 @@
 #include <bits/stdc++.h>
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
-
----
+```
 
 ### 시간 복잡도
 입력의 크기와 문제를 해결하는데 걸리는 시간의 상관관계
@@ -45,7 +44,7 @@ Vector를 참조하는 시간 복잡도 : O(1)
 scanf -> getline(cin, str);
 > str -> C++ String
 
-**배열**
+## 배열
 메모리 상에 원소를 연속하게 배치한 자료구조
 1. O(1)에 k번째 원소를 확인/변경 가능
 2. 추가적으로 소모되는 메모리의 양(=overhead)가 거의 없음
