@@ -18,9 +18,11 @@ O(1) < O(lgN) < O(N) < O(NlgN) < O(N^2) < O(2^n) < O(N!)
 
 ### 공간 복잡도
 입력의 크기와 문제를 해결하는데 필요한 공간의 상관관계
-> 512MB = 1.2억개의 int자료형을 사용 가능
+```
+512MB = 1.2억개의 int자료형을 사용 가능
+```
 
-- Example code : TimeComplexity.cpp
+> Example code : TimeComplexity.cpp
 
 ### 정수 자료형
 short(2byte) < int(4byte) < long long (8byte)
@@ -28,33 +30,38 @@ short(2byte) < int(4byte) < long long (8byte)
 ### 실수 자료형
 float(4byte) < double(8byte)
 
-* **float**: sign(1) + exponent(8) + fraction (23)
-* **double**: sign(1) + exponent(11) + fraction (52)
+float: sign(1) + exponent(8) + fraction (23)
+double: sign(1) + exponent(11) + fraction (52)
 
 ### 실수 자료형 주의사항
 1. 실수의 저장/연산 과정에서 반드시 오차가 발생할 수 밖에 없다.
 2. double에 long long 범위의 정수를 함부로 담으면 안된다.
 3. 실수를 비교할 때는 등호를 사용하면 안된다.
 
-## STL
+### STL
 Vector를 복사하는 시간 복잡도 : O(N)
 Vector를 참조하는 시간 복잡도 : O(1)
 
-## 표준 입출력
-scanf -> getline(cin, str);
-> str -> C++ String
+### 표준 입출력
+C++ String 입력 : getline(cin, str);
 
 ## 배열
+### 배열의 정의
 메모리 상에 원소를 연속하게 배치한 자료구조
+
+### 배열의 성질
 1. O(1)에 k번째 원소를 확인/변경 가능
 2. 추가적으로 소모되는 메모리의 양(=overhead)가 거의 없음
 3. Cache hit rate가 높음
 4. 메모리 상에 연속한 구간을 잡아야 해서 할당에 제약이 걸림
 
+### 배열의 시간복잡도
 1. 임의의 위치에 있는 원소를 확인/변경 : O(1)
 2. 마지막 위치의 원소를 추가/제거 : O(1)
 3. 임의의 위치에 원소를 추가/제거 : O(N)
-> k번에 추가된다면, k이후의 원소들을 한칸씩 밀고, 땡기기 때문에
+```
+k번에 추가된다면, k이후의 원소들을 한칸씩 밀고, 땡기기 때문이다.
+```
 
 fill : fill(arr, arr+arr_size, 0);
 
