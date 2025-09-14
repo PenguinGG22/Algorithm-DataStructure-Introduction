@@ -107,9 +107,9 @@ Overhead : 작업을 처리하는데 간접적으로 필요한 자원이나 시�
 2. 임의의 위치에 있는 원소를 추가/제거 : O(1)
 
 ### 연결 리스트의 구현
-> Example Code : Linked-list1.cpp
-> Example Code : Linked-list2.cpp
-> Solution Code : 1406.cpp
+> * Example Code : Linked-list1.cpp
+> * Example Code : Linked-list2.cpp
+> * Solution Code : 1406.cpp
 
 ### 연결 리스트 문제
 1. 원형 연결 리스트 내의 임의의 노드 하나가 주어졌을 때 해당 List의 길이?
