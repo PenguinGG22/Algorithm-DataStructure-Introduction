@@ -8,7 +8,7 @@ typedef struct{
     int Score; 
 } Student;
 
-// Quick Sort function
+// Sort function
 void swap(Student* a, Student* b) {
     Student temp = *a;
     *a = *b;
@@ -27,11 +27,40 @@ int partition(Student arr[], int low, int high) {
     swap(&arr[i + 1], &arr[high]);
     return (i + 1);
 }
+// QuickSort function
 void quickSort(Student arr[], int low, int high) {
     if (low < high) {
         int pi = partition(arr, low, high);
         quickSort(arr, low, pi - 1);
         quickSort(arr, pi + 1, high);
+    }
+}
+// BubbleSort function
+void bubbleSort(Student arr[], int n) {
+    int i, j;
+    
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j].Score > arr[j + 1].Score) {
+                swap(&arr[j], &arr[j + 1]);
+            }
+        }
+    }
+}
+// SelectionSort function
+void selectionSort(Student arr[], int n) {
+    int i, j, min_idx;
+
+    for (i = 0; i < n - 1; i++) {
+        min_idx = i;
+        for (j = i + 1; j < n; j++) {
+            if (arr[j].Score < arr[min_idx].Score) {
+                min_idx = j;
+            }
+        }
+        if (min_idx != i) {
+            swap(&arr[min_idx], &arr[i]);
+        }
     }
 }
 
@@ -116,7 +145,21 @@ int main() {
         }
     }
 
-    if (Count > 0) {
+    int commandSort = 0;
+    printf("---------------------\n");
+    printf("1: BubbleSort\n");
+    printf("2: SelectionSort\n");
+    printf("3: QuickSort\n");
+    printf("---------------------\n");
+    printf("정렬할 방식을 선택하세요 : ");
+    scanf("%d", &commandSort);
+    if(commandSort == 1){
+        bubbleSort(students, Count);
+    }
+    else if(commandSort == 2){
+        selectionSort(students, Count);
+    }
+    else {
         quickSort(students, 0, Count - 1);
     }
     
@@ -127,7 +170,7 @@ int main() {
         printf("2: 성적 범위 검색\n");
         printf("3: 성적 통계 보기\n");
         printf("4: 파일에 저장하기\n");
-        printf("그 외: 프로그램 종료\n");
+        printf("5: 프로그램 종료\n");
         printf("----------------------------------\n");
 
         int Command;
@@ -152,26 +195,29 @@ int main() {
             int foundIndex = sequentialSearch(students, Count, searchKey, searchType);
 
             if (foundIndex != -1) { 
-            printf("\n--- 검색 결과 ---\n");
+            printf("\n---- 검색 결과 ----\n");
             printf("학생을 찾았습니다.\n");
             printf("이름: %s\n", students[foundIndex].Name);
             printf("학번: %d\n", students[foundIndex].ID);
             printf("점수: %d\n", students[foundIndex].Score);
+            printf("--------------------");
             } 
             else {
-                printf("\n해당 학생을 찾을 수 없습니다.\n");
+                printf("해당 학생을 찾을 수 없습니다.\n");
             }
         }
         else if(Command == 1){ // 1.최고/최저 성적 학생 보기
+            printf("--------------------\n");
             printf("성적이 가장 높은 학생\n");
             printf("이름: %s\n", students[Count - 1].Name);
             printf("학번: %d\n", students[Count - 1].ID);
             printf("점수: %d\n", students[Count - 1].Score);
-
+            printf("--------------------\n");
             printf("성적이 가장 낮은 학생\n");
             printf("이름: %s\n", students[0].Name);
             printf("학번: %d\n", students[0].ID);
             printf("점수: %d\n", students[0].Score);
+            printf("--------------------");
         }
         else if(Command == 2){ // 2.성적 범위 검색
             int rangeMin, rangeMax;
@@ -220,7 +266,7 @@ int main() {
                 mode = students[Count - 1].Score;
             }
 
-            printf("\n--- 성적 통계 ---\n");
+            printf("\n---- 성적 통계 ----\n");
             printf("평균 점수: %.2f\n", average);
             printf("중앙값: %.1f\n", median);
 
@@ -229,11 +275,12 @@ int main() {
             } else {
                 printf("최빈값: 없음\n");
             }
+            printf("--------------------");
         }
         else if(Command == 4) { // 4.파일에 저장하기
             saveToFile(students, Count);
         }
-        else { // escape
+        else { // Program Escape
             printf("프로그램을 종료합니다.\n");
             break;
         }
