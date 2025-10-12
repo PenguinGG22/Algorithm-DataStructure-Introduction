@@ -1,5 +1,9 @@
 # Algorithm-Introduction
-
+##Reference  
+바킹둑의 알고리즘  
+(C++로 구현하는) 자료구조와 알고리즘  
+##Lecture  
+알고리즘 COM3026  
 ### Online Judge STL/IO Setting
 ```cpp
 #include <bits/stdc++.h>
