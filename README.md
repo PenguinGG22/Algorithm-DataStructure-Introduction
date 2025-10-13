@@ -1,12 +1,17 @@
 # Algorithm-Introduction
-
-### Online Judge STL/IO Setting
+## Reference
+바킹둑의 알고리즘  
+(C++로 구현하는) 자료구조와 알고리즘  
+## Lecture
+알고리즘 COM3026  
+## Online Judge STL/IO Setting  
 ```cpp
 #include <bits/stdc++.h>
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
 ```
 
+## 바킹둑의 알고리즘  
 ### 시간 복잡도
 입력의 크기와 문제를 해결하는데 걸리는 시간의 상관관계
 
