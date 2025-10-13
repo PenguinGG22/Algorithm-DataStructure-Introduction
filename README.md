@@ -1,9 +1,10 @@
 # Algorithm-Introduction
 ## Reference
-바킹둑의 알고리즘  
 윤성우의 열혈 자료구조  
+바킹둑의 알고리즘  
 (C++로 구현하는) 자료구조와 알고리즘  
 ## Lecture
+자료구조 COM2012  
 알고리즘 COM3026  
 ## Online Judge STL/IO Setting  
 ```cpp
