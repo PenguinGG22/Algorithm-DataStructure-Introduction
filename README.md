@@ -9,8 +9,20 @@
 ## Online Judge STL/IO Setting  
 ```cpp
 #include <bits/stdc++.h>
-ios_base::sync_with_stdio(false);
-cin.tie(NULL);
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+
+	return 0;
+}
+```
+
+## Github pull Setting
+```
+git pull --rebase origin main
+git push origin main
 ```
 
 ## 바킹둑의 알고리즘  
