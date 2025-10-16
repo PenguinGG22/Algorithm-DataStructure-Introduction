@@ -231,6 +231,7 @@ int head = MX, tail = MX;
 모든 칸이 큐에 1번씩 들어가므로 시간 복잡도는 칸이 N개일때 O(N)
 > Example code : Pair.cpp  
 > Example code : BFS.cpp  
+> Solution code : 1926.cpp 
 > Solution code : 2178.cpp  
 > Solution code : 7576.cpp  
 > Solution code : 4179.cpp  
