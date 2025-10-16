@@ -21,7 +21,7 @@ void BFS(int i, int j) {
 	while (!Q.empty()) {
 		pair<int, int> cur = Q.front(); Q.pop();
 
-		for (int dir = 0; dir < 4; i++) {
+		for (int dir = 0; dir < 4; dir++) {
 			int nx = cur.X + dx[dir];
 			int ny = cur.Y + dy[dir];
 
