@@ -12,28 +12,6 @@ int dist[52][52];
 
 int N, M;
 
-/* printing board and dist
-
-void print() {
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < M; j++) {
-            cout << board[i][j] << ' ';
-        }
-        cout << '\n';
-    }
-    cout << '\n';
-
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < M; j++) {
-            cout << dist[i][j] << ' ';
-        }
-        cout << '\n';
-    }
-    cout << '\n';
-}
-
-*/
-
 void BFS(int R, int C) {
     queue<pair<int, int>> Q;
     dist[R][C] = 1;
@@ -51,8 +29,6 @@ void BFS(int R, int C) {
             Q.push({ nx,ny });
         }
     }
-
-    // print();
 }
 
 int main() {
