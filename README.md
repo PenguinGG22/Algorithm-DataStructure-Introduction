@@ -6,6 +6,7 @@
 ## Lecture
 자료구조 COM 2012  
 알고리즘 COM 3026  
+[2023-2 KU OCW] 알고리즘, 유용재 교수  
 ## Online Judge STL/IO Setting  
 ```cpp
 #include <bits/stdc++.h>
