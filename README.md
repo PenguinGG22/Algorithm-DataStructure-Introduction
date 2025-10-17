@@ -1,14 +1,17 @@
 # Algorithm-Introduction
+
 ## Reference
 윤성우의 열혈 자료구조  
 바킹둑의 알고리즘 문제집  
 파이썬으로 구현하는 자료구조와 알고리즘  
+
 ## Lecture
 바킹둑의 알고리즘  
 자료구조 COM 2012  
 알고리즘 COM 3026  
-[2023-2 KUOCW] 자료구조  
-[2023-2 KUOCW] 알고리즘  
+자료구조 [KUOCW]  
+알고리즘 [KUOCW]  
+
 ## Online Judge STL/IO Setting  
 ```cpp
 #include <bits/stdc++.h>
