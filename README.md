@@ -7,10 +7,8 @@
 
 ## Lecture
 바킹둑의 알고리즘  
-자료구조 COM 2012  
-알고리즘 COM 3026  
-자료구조 [KUOCW]  
-알고리즘 [KUOCW]  
+자료구조 COM2012  
+알고리즘 COM3026  
 
 ## Online Judge STL/IO Setting  
 ```cpp
