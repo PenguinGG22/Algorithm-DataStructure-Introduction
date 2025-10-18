@@ -7,8 +7,8 @@
 
 ## Lecture
 바킹둑의 알고리즘  
-Data Structure COM2012  
-Algorithm COM3026  
+자료구조 COM 2012  
+알고리즘 COM 3026  
 
 ## Online Judge STL/IO Setting  
 ```cpp
