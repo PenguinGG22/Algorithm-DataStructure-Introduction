@@ -6,8 +6,8 @@
 파이썬으로 구현하는 자료구조와 알고리즘  
 
 ## Lecture
-바킹둑의 알고리즘  
-자료구조 COM 2012  
+바킹독의 실전 알고리즘  
+자료구조 COM 2012   
 알고리즘 COM 3026  
 
 ## Online Judge STL/IO Setting  
@@ -267,6 +267,9 @@ int head = MX, tail = MX;
 > Solution code : 1629.cpp  
 > Solution code : 11729.cpp  
 > Solution code : 1074.cpp  
+
+## BackTracking
+> Soultion code : 15649.cpp
 ---
 
 Sort
