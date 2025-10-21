@@ -61,10 +61,6 @@ double: sign(1) + exponent(11) + fraction (52)
 2. double에 long long 범위의 정수를 함부로 담으면 안된다.
 3. 실수를 비교할 때는 등호를 사용하면 안된다.
 
-### STL
-Vector를 복사하는 시간 복잡도 : O(N)
-Vector를 참조하는 시간 복잡도 : O(1)
-
 ### String 입력 함수
 ```
 getline(cin, str);
@@ -99,6 +95,8 @@ fill(arr, arr + arr_size, 0);
 ```
 ## Vector
 ### STL vector
+Vector를 복사하는 시간 복잡도 : O(N)  
+Vector를 참조하는 시간 복잡도 : O(1)  
 > Example Code : Vector.cpp  
 
 ### Range-based for loop
@@ -269,6 +267,13 @@ int head = MX, tail = MX;
 > Solution code : 1074.cpp  
 
 ## BackTracking
+↘︎ 대각선을 점유하는 식 : x + y  
+↗︎ 대각선을 점유하는 식 : x + y + n - 1  
+```
+9663.cpp, N-Queen
+bool isUsed[x + y];
+bool isUsed[x + y + n - 1];
+```
 > Soultion code : 15649.cpp  
 > Soultion code : 9663.cpp  
 > Soultion code : 1182.cpp
