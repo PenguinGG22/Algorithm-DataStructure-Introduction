@@ -269,9 +269,11 @@ int head = MX, tail = MX;
 > Solution code : 1074.cpp  
 
 ## BackTracking
-> Soultion code : 15649.cpp
-> Soultion code : 9663.cpp
+> Soultion code : 15649.cpp  
+> Soultion code : 9663.cpp  
 > Soultion code : 1182.cpp
+
+
 ---
 
 Sort
