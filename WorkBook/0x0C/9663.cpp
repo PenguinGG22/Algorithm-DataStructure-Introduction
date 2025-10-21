@@ -9,6 +9,7 @@ int N, cnt;
 
 void BackTracking(int k) {
 	if (k == N) {
+		cnt++;
 		return;
 	}
 	
