@@ -267,8 +267,8 @@ int head = MX, tail = MX;
 > Solution code : 1074.cpp  
 
 ## BackTracking
-↘︎ 대각선을 점유하는 식 : x + y  
-↗︎ 대각선을 점유하는 식 : x + y + n - 1  
+↗︎ 대각선을 점유하는 식 : x + y  
+↘︎ 대각선을 점유하는 식 : x + y + n - 1  
 ```
 9663.cpp, N-Queen
 bool isUsed[x + y];
