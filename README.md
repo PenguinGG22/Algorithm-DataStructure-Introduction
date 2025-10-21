@@ -278,7 +278,13 @@ bool isUsed[x - y + n - 1];
 > Soultion code : 9663.cpp  
 > Soultion code : 1182.cpp
 
-
+## STL permutation
+```
+std::next_permutation(v.begin(), v.end());
+현재 상태의 순열을 사전 순으로 다음 순열로 바꿔줍니다.
+std::prev_permutation(v.begin(), v.end());
+현재 상태의 순열을 사전 순으로 이전 순열로 바꿔줍니다.
+```
 ---
 
 Sort
