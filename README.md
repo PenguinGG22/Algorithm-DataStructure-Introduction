@@ -268,11 +268,11 @@ int head = MX, tail = MX;
 
 ## BackTracking
 ↗︎ 대각선을 점유하는 식 : x + y  
-↘︎ 대각선을 점유하는 식 : x + y + n - 1  
+↘︎ 대각선을 점유하는 식 : x - y + n - 1  
 ```
 9663.cpp, N-Queen
 bool isUsed[x + y];
-bool isUsed[x + y + n - 1];
+bool isUsed[x - y + n - 1];
 ```
 > Soultion code : 15649.cpp  
 > Soultion code : 9663.cpp  
